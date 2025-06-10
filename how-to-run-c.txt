@@ -1,0 +1,2 @@
+gcc -O3 commuting_pairs_fq.c -o commuting
+./commuting
