@@ -1,0 +1,5 @@
+# Run in Sage
+from commuting_driver import commuting_counts_and_polynomial
+
+q_list = [2, 3, 5, 7, 11]  # Only prime fields
+P = commuting_counts_and_polynomial(q_list)
