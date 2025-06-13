@@ -8,7 +8,7 @@ def commuting_pair_count(n, q):
     M = MatrixSpace(F, n)
     total = 0
     for A in M:
-        cent = [B for B in M if A*B == B*A]
+        cent = [B for B in M if A*B == B*A and A^2== 0 and B^2 == 0]
         total += len(cent)
     return total
 
