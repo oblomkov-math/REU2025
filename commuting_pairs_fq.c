@@ -4,7 +4,7 @@
 #include <math.h>
 
 #define N 2         // Matrix size
-#define Q 19        // Field size (set to 2, 3, 4, or 5)
+#define Q 2        // Field size (set to 2, 3, 4, or 5)
 #define FIELD_SIZE Q
 #define MAT_ENTRIES (N * N)
 #define NUM_MATRICES (int)(pow(Q, MAT_ENTRIES))
@@ -62,3 +62,5 @@ int main() {
     printf("Total commuting pairs for 2x2 matrices over F_%d: %d\n", Q, total);
     return 0;
 }
+
+
