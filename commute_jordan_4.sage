@@ -343,3 +343,22 @@ print(f"Number of solutions over F_5: {num_points}")
 #                       F_3 is  3*5
 #                       F_5     5*9
 #  So counting polynomial is p(2p-1)
+
+
+
+C34 = parametrize_commutant_jordan([3,4])
+J34 = jordan_block_matrix([3,4])
+Eq34 = J34^2*C34^2
+eqns34 = [ Eq34[i,j] for i in range(6) for j in range(6) if Eq34[i,j]!=0]
+e34 = set(eqns34)
+
+
+C44 = parametrize_commutant_jordan([4,4])
+J44 = jordan_block_matrix([4,4])
+Eq44 = J44^2*C44^2
+eqns44 = [ Eq44[i,j] for i in range(7) for j in range(7) if Eq44[i,j]!=0]
+e44 = set(eqns44)
+
+
+### for n=4  need 4,0   3,1   2,2 2,1,1
+#### 1,1,1,1 
