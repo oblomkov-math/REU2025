@@ -146,7 +146,9 @@ for B in basis:
 
 
 
-    
+
+
+
 def parametrize_commutant_jordan(sizes):
     from sage.all import block_diagonal_matrix, matrix, PolynomialRing, QQ, MatrixSpace, var
 
@@ -230,7 +232,7 @@ Eq33 = J33^2*C33^2
 eqns33 = [ Eq33[i,j] for i in range(5) for j in range(5) if Eq33[i,j]!=0]
 e33 = set(eqns33)
 
-
+ 
 # Define the finite field
 F = GF(3)
 
@@ -316,7 +318,7 @@ print(f"Number of solutions over F_3: {num_points}")
 
 
 # Finite field
-F = GF(5)
+F = GF(7)
 
 # Define the polynomial ring in 10 variables (we need at least t1..t10)
 R = PolynomialRing(F, ['s{}'.format(i) for i in range(4)])
@@ -337,11 +339,12 @@ X = A.subscheme(eqs)
 
 # Count F_3-rational points
 num_points = X.count_points(1)
-print(f"Number of solutions over F_5: {num_points}")
+print(f"Number of solutions over F_3: {num_points}")
 
 # number of points over F_2 is  2*3
 #                       F_3 is  3*5
 #                       F_5     5*9
+#                       f_7     7*13
 #  So counting polynomial is p(2p-1)
 
 
