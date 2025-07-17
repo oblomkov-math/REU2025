@@ -395,7 +395,7 @@ print(f"Number of solutions over F_3: {num_points}")
 
 ##################################################
 # This is where an interesting part starts
-###############################################
+##########################################
 
 
 C34 = parametrize_commutant_jordan([3,4])
@@ -419,6 +419,67 @@ J45 = jordan_block_matrix([4,5])
 Eq45 = J45^2*C45^2
 eqns45 = [ Eq45[i,j] for i in range(9) for j in range(9) if Eq45[i,j]!=0]
 e45 = set(eqns45)
+
+
+
+
+C633 = parametrize_commutant_jordan([6,3,3])
+J633 = jordan_block_matrix([6,3,3])
+Eq633 = J633^2*C633^2
+eqns633 = [ Eq633[i,j] for i in range(12) for j in range(12) if Eq633[i,j]!=0]
+e633 = set(eqns633)
+
+
+C53 = parametrize_commutant_jordan([5,3])
+J53 = jordan_block_matrix([5,3])
+Eq53 = J53^2*C53^2
+eqns53 = [ Eq53[i,j] for i in range(8) for j in range(8) if Eq53[i,j]!=0]
+e53 = set(eqns53)
+
+
+C63 = parametrize_commutant_jordan([6,3])
+J63 = jordan_block_matrix([6,3])
+Eq63 = J63^2*C63^2
+eqns63 = [ Eq63[i,j] for i in range(9) for j in range(9) if Eq63[i,j]!=0]
+e63 = set(eqns63)
+
+
+C73 = parametrize_commutant_jordan([7,3])
+J73 = jordan_block_matrix([7,3])
+Eq73 = J73^2*C73^2
+eqns73 = [ Eq73[i,j] for i in range(10) for j in range(10) if Eq73[i,j]!=0]
+e73 = set(eqns73)
+
+
+
+C64 = parametrize_commutant_jordan([6,4])
+J64 = jordan_block_matrix([6,4])
+Eq64 = J64^2*C64^2
+eqns64 = [ Eq64[i,j] for i in range(10) for j in range(10) if Eq64[i,j]!=0]
+e64 = set(eqns64)
+
+
+C74 = parametrize_commutant_jordan([7,4])
+J74 = jordan_block_matrix([7,4])
+Eq74 = J74^2*C74^2
+eqns74 = [ Eq74[i,j] for i in range(11) for j in range(11) if Eq74[i,j]!=0]
+e74 = set(eqns74)
+
+
+C84 = parametrize_commutant_jordan([8,4])
+J84 = jordan_block_matrix([8,4])
+Eq84 = J84^2*C84^2
+eqns84 = [ Eq84[i,j] for i in range(12) for j in range(12) if Eq84[i,j]!=0]
+e84 = set(eqns84)
+
+
+C94 = parametrize_commutant_jordan([9,4])
+J94 = jordan_block_matrix([9,4])
+Eq94 = J94^2*C94^2
+eqns94 = [ Eq94[i,j] for i in range(13) for j in range(13) if Eq94[i,j]!=0]
+e94 = set(eqns94)
+
+
 
 
 from sympy import symbols, solve
