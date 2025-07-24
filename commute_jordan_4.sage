@@ -229,9 +229,53 @@ print(J)
 C33 = parametrize_commutant_jordan([3,3])
 J33 = jordan_block_matrix([3,3])
 Eq33 = J33^2*C33^2
-eqns33 = [ Eq33[i,j] for i in range(5) for j in range(5) if Eq33[i,j]!=0]
+eqns33 = [ Eq33[i,j] for i in range(6) for j in range(6) if Eq33[i,j]!=0]
 e33 = set(eqns33)
 
+
+C34 = parametrize_commutant_jordan([3,4])
+J34 = jordan_block_matrix([3,4])
+Eq34 = J34^2*C34^2
+eqns34 = [ Eq34[i,j] for i in range(7) for j in range(7) if Eq34[i,j]!=0]
+e34 = set(eqns34)
+
+
+
+
+
+
+
+C44 = parametrize_commutant_jordan([4,4])
+J44 = jordan_block_matrix([4,4])
+Eq44 = J44^2*C44^2
+eqns44 = [ Eq44[i,j] for i in range(8) for j in range(8) if Eq44[i,j]!=0]
+e44 = set(eqns44)
+
+
+
+C55 = parametrize_commutant_jordan([5,5])
+J55 = jordan_block_matrix([5,5])
+Eq55 = J55^2*C55^2
+eqns55 = [ Eq55[i,j] for i in range(10) for j in range(10) if Eq55[i,j]!=0]
+e55 = set(eqns55)
+
+
+C533 = parametrize_commutant_jordan([5,3,3])
+J533 = jordan_block_matrix([5,3,3])
+Eq533 = J533^2*C533^2
+eqns533 = [ Eq533[i,j] for i in range(11) for j in range(11) if Eq533[i,j]!=0]
+e533 = set(eqns533)
+
+
+C333 = parametrize_commutant_jordan([3,3,3])
+J333 = jordan_block_matrix([3,3,3])
+Eq333 = J333^2*C333^2
+eqns333 = [ Eq333[i,j] for i in range(9) for j in range(9) if Eq333[i,j]!=0]
+e333 = set(eqns333)
+
+
+
+Rq = PolynomialRing(QQ,'q')
  
 # Define the finite field
 F = GF(3)
@@ -349,18 +393,117 @@ print(f"Number of solutions over F_3: {num_points}")
 
 
 
+##################################################
+# This is where an interesting part starts
+##########################################
+
+
 C34 = parametrize_commutant_jordan([3,4])
 J34 = jordan_block_matrix([3,4])
 Eq34 = J34^2*C34^2
-eqns34 = [ Eq34[i,j] for i in range(6) for j in range(6) if Eq34[i,j]!=0]
+eqns34 = [ Eq34[i,j] for i in range(7) for j in range(7) if Eq34[i,j]!=0]
 e34 = set(eqns34)
 
 
 C44 = parametrize_commutant_jordan([4,4])
 J44 = jordan_block_matrix([4,4])
 Eq44 = J44^2*C44^2
-eqns44 = [ Eq44[i,j] for i in range(7) for j in range(7) if Eq44[i,j]!=0]
+eqns44 = [ Eq44[i,j] for i in range(8) for j in range(8) if Eq44[i,j]!=0]
 e44 = set(eqns44)
+
+
+
+
+C45 = parametrize_commutant_jordan([4,5])
+J45 = jordan_block_matrix([4,5])
+Eq45 = J45^2*C45^2
+eqns45 = [ Eq45[i,j] for i in range(9) for j in range(9) if Eq45[i,j]!=0]
+e45 = set(eqns45)
+
+
+
+
+C633 = parametrize_commutant_jordan([6,3,3])
+J633 = jordan_block_matrix([6,3,3])
+Eq633 = J633^2*C633^2
+eqns633 = [ Eq633[i,j] for i in range(12) for j in range(12) if Eq633[i,j]!=0]
+e633 = set(eqns633)
+
+
+C53 = parametrize_commutant_jordan([5,3])
+J53 = jordan_block_matrix([5,3])
+Eq53 = J53^2*C53^2
+eqns53 = [ Eq53[i,j] for i in range(8) for j in range(8) if Eq53[i,j]!=0]
+e53 = set(eqns53)
+
+
+C63 = parametrize_commutant_jordan([6,3])
+J63 = jordan_block_matrix([6,3])
+Eq63 = J63^2*C63^2
+eqns63 = [ Eq63[i,j] for i in range(9) for j in range(9) if Eq63[i,j]!=0]
+e63 = set(eqns63)
+
+
+C73 = parametrize_commutant_jordan([7,3])
+J73 = jordan_block_matrix([7,3])
+Eq73 = J73^2*C73^2
+eqns73 = [ Eq73[i,j] for i in range(10) for j in range(10) if Eq73[i,j]!=0]
+e73 = set(eqns73)
+
+
+
+C64 = parametrize_commutant_jordan([6,4])
+J64 = jordan_block_matrix([6,4])
+Eq64 = J64^2*C64^2
+eqns64 = [ Eq64[i,j] for i in range(10) for j in range(10) if Eq64[i,j]!=0]
+e64 = set(eqns64)
+
+
+C74 = parametrize_commutant_jordan([7,4])
+J74 = jordan_block_matrix([7,4])
+Eq74 = J74^2*C74^2
+eqns74 = [ Eq74[i,j] for i in range(11) for j in range(11) if Eq74[i,j]!=0]
+e74 = set(eqns74)
+
+
+C84 = parametrize_commutant_jordan([8,4])
+J84 = jordan_block_matrix([8,4])
+Eq84 = J84^2*C84^2
+eqns84 = [ Eq84[i,j] for i in range(12) for j in range(12) if Eq84[i,j]!=0]
+e84 = set(eqns84)
+
+
+C94 = parametrize_commutant_jordan([9,4])
+J94 = jordan_block_matrix([9,4])
+Eq94 = J94^2*C94^2
+eqns94 = [ Eq94[i,j] for i in range(13) for j in range(13) if Eq94[i,j]!=0]
+e94 = set(eqns94)
+
+
+
+
+from sympy import symbols, solve
+
+
+t1, t2, t5, t6, t9, t10, t13, t14 = symbols('t1 t2 t5 t6 t9 t10 t13 t14')
+
+# Define the system of equations
+equations = [
+    t1*t5 + t13*t5,
+    t13**2 + t5*t9,
+    t14*t5 + t2*t5 + t1*t6 + t13*t6,
+    2*t1*t2 + t10*t5 + t6*t9,
+    2*t13*t14 + t10*t5 + t6*t9,
+    t1*t10 + t10*t13 + t14*t9 + t2*t9,
+    t1*t9 + t13*t9,
+    t1**2 + t5*t9
+]
+
+# Solve the system of equations
+solution = solve(equations, (t1, t2, t5, t6, t9, t10, t13, t14), dict=True)
+
+# Print the solution
+print(solution)
 
 
 ### for n=4  need 4,0   3,1   2,2 2,1,1
